@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #b9eaff;
+  overflow: hidden;
+}
+#gameContainer {
+  position: relative;
+  width: 900px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  background: #87ceeb;
+}
+#background {
+  position: absolute;
+  width: 200%;
+  height: 100%;
+  background: url('assets/sky.png') repeat-x;
+  background-size: cover;
+  animation: moveBg 15s linear infinite;
+}
+@keyframes moveBg {
+  from { background-position: 0 0; }
+  to { background-position: -900px 0; }
+}
+#ground {
+  position: absolute;
+  bottom: 0;
+  width: 200%;
+  height: 40px;
+  background: url('assets/ground.png') repeat-x;
+  background-size: contain;
+  animation: moveGround 2s linear infinite;
+}
+@keyframes moveGround {
+  from { background-position: 0 0; }
+  to { background-position: -900px 0; }
+}
+#d
